@@ -1,14 +1,24 @@
-import React from 'react'
-import { IMG_CDN_URL } from '../utils/constants'
+// MovieCard.js
+import React from 'react';
+import { IMG_CDN_URL } from '../utils/constants';
+import './MovieCard.css';
 
-const MovieCard = ({posterPath}) => {
+const MovieCard = ({ posterPath }) => {
+  if(!posterPath) return null;
   return (
-    <div className='w-48 pr-4'>
-        <img src={IMG_CDN_URL+ posterPath} alt='img'>
-
-        </img>
+    <div className="movie-card-container">
+      <img
+        src={IMG_CDN_URL + posterPath}
+        alt="Movie Poster"
+        className="movie-card-image"
+      />
+      <div className="movie-card-overlay">
+        <div className="movie-info">
+          
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default MovieCard
+export default MovieCard;

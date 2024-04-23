@@ -38,6 +38,7 @@ const Login = () => {
                 
               }).then(() => {
                 const {uid,email,displayName,photoURL}=auth.currentUser;
+              //  console.log("DISPLAY NAME:", displayName);
               dispatch(
                 addUser({
                   uid:uid,
@@ -121,3 +122,4 @@ const Login = () => {
 }
 
 export default Login 
+
